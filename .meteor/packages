@@ -9,3 +9,4 @@ aldeed:simple-schema
 twbs:bootstrap
 percolate:synced-cron
 iron:router
+meteorhacks:cluster
