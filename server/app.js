@@ -7,11 +7,15 @@ SyncedCron.add({
     }, 
     job: function() {
         console.log("Running sample method");
-        Logs.insert({startedAt:new Date(), message:"Starting sample method"});
+        Meteor.call("insertLog");
     }
 });
 
-
+Meteor.methods({
+	insertLog:function(){
+		Logs.insert({startedAt:new Date(), message:"Starting sample method"});
+	}
+})
 Meteor.publish("logs", function(){
 	return Logs.find();
 });
