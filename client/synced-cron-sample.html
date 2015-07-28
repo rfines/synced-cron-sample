@@ -1,0 +1,30 @@
+<head>
+  <title>synced-cron-sample</title>
+</head>
+<template name="layout">
+	<body>
+  		
+  		<div class="jumbotron">
+  			<h4>Welcome to My Meteor Sample App</h4>
+  			<p>I am recreating an issue that I have run into while running my app on heroku using the percolate:synced-cron package. Logs will show up below when the job starts running. I have it currently set to run every 5 minutes.</p>
+  		</div>
+	  	{{> yield}}
+	</body>
+</template>
+
+<template name="hello">
+  <div class="row">
+  	<ul>
+  		{{#each logs}}
+	  		<li>
+		  		{{message}} -- {{startedAt}}
+	  		</li>
+	  		{{else}}
+	  		<li>No Logs yet</li>
+	  	{{/each}}
+
+  	</ul>
+  </div>
+  
+</template>
+	
