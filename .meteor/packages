@@ -10,3 +10,6 @@ twbs:bootstrap
 percolate:synced-cron
 iron:router
 meteorhacks:cluster
+reywood:publish-composite
+anti:fake
+stevezhu:lodash
